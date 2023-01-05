@@ -143,11 +143,14 @@ public class Main {
                 Scanner scanner = new Scanner(System.in);
                 DataProcessor.searchPrice(parts, scanner.nextInt()).printInfo();
                 break;
-            } catch (InputMismatchException e) {
+            }
+            catch (InputMismatchException e) {
                 System.out.print("Вы ввели строку, а не число.\nПожалуйста, введите число: ");
-            } catch (NegativeInput e) {
+            }
+            catch (NegativeInput e) {
                 System.out.print("Вы ввели отрицательное число.\nПожалуйста, введите число: ");
-            } catch (IndexOutOfBoundsException e) {
+            }
+            catch (IndexOutOfBoundsException e) {
                 System.out.print("Объект с таким ценником не найден.");
                 break;
             }
