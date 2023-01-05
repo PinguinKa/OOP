@@ -129,10 +129,9 @@ public class Main {
         for (Detail detail : details) {
             detail.printInfo();
         }
-
-        parts.sort(Comparator.comparing(Detail::getPrice).reversed());  // Reverse ordering by rating.
-        List<Component> price = DataProcessor.top3Price(parts);
         System.out.println();
+
+        List<Component> price = DataProcessor.top3Price(parts);
         for (Component component : price) {
             component.printInfo();
         }
