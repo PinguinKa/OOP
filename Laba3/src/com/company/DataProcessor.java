@@ -6,6 +6,7 @@ import java.util.stream.*;
 
 public class DataProcessor {
     public static List<Component> top3Price(ArrayList<Component> list) {
+        list.sort(Comparator.comparing(Detail::getPrice).reversed());
         List<Component> top3 = list.stream()
                 .filter(element -> element.price < 30)
                 .filter(element -> element.price > 10)
